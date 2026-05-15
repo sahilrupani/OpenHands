@@ -1,153 +1,104 @@
-<a name="readme-top"></a>
+# OpenHands Coding Agent — Railway Template
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/OpenHands/docs/main/openhands/static/img/logo.png" alt="Logo" width="200">
-  <h1 align="center" style="border-bottom: none">OpenHands: AI-Driven Development</h1>
-</div>
+![OpenHands](https://opengraph.githubassets.com/4a3fa291732195ae8467266dd5a49902a29d66a2efa92dcdd854c9c7a7e035f3/OpenHands/OpenHands)
 
+> Self-hosted, open-source autonomous AI coding agent. Bring your own LLM. Full autonomy.
 
-<div align="center">
-  <a href="https://github.com/OpenHands/OpenHands/blob/main/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-20B2AA?style=for-the-badge" alt="MIT License"></a>
-  <a href="https://docs.google.com/spreadsheets/d/1wOUdFCMyY6Nt0AIqF705KN4JKOWgeI4wUGUP60krXXs/edit?gid=811504672#gid=811504672"><img src="https://img.shields.io/badge/SWEBench-77.6-00cc00?logoColor=FFE165&style=for-the-badge" alt="Benchmark Score"></a>
-  <br/>
-  <a href="https://docs.openhands.dev/sdk"><img src="https://img.shields.io/badge/Documentation-000?logo=googledocs&logoColor=FFE165&style=for-the-badge" alt="Check out the documentation"></a>
-  <a href="https://arxiv.org/abs/2511.03690"><img src="https://img.shields.io/badge/Paper-000?logoColor=FFE165&logo=arxiv&style=for-the-badge" alt="Tech Report"></a>
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/openhands-coding-agent?utm_medium=integration&utm_source=button&utm_campaign=openhands-coding-agent)
 
+---
 
-  <!-- Keep these links. Translations will automatically update with the README. -->
-  <a href="https://www.readme-i18n.com/OpenHands/OpenHands?lang=de">Deutsch</a> |
-  <a href="https://www.readme-i18n.com/OpenHands/OpenHands?lang=es">Español</a> |
-  <a href="https://www.readme-i18n.com/OpenHands/OpenHands?lang=fr">français</a> |
-  <a href="https://www.readme-i18n.com/OpenHands/OpenHands?lang=ja">日本語</a> |
-  <a href="https://www.readme-i18n.com/OpenHands/OpenHands?lang=ko">한국어</a> |
-  <a href="https://www.readme-i18n.com/OpenHands/OpenHands?lang=pt">Português</a> |
-  <a href="https://www.readme-i18n.com/OpenHands/OpenHands?lang=ru">Русский</a> |
-  <a href="https://www.readme-i18n.com/OpenHands/OpenHands?lang=zh">中文</a>
-</div>
+## What is OpenHands?
 
-<hr>
+OpenHands is an open-source, model-agnostic platform for autonomous AI software development. Unlike coding assistants that suggest snippets, OpenHands runs agents that **plan, write, debug, and apply changes** across your entire codebase — end to end — without handholding.
 
-🙌 Welcome to OpenHands, a [community](COMMUNITY.md) focused on AI-driven development. We’d love for you to [join us on Slack](https://dub.sh/openhands).
+Trusted by engineering teams at AMD, Google, Amazon, Netflix, and NVIDIA. Backed by 60,000+ GitHub stars and an $18.8M Series A.
 
-There are a few ways to work with OpenHands:
+![OpenHands Dashboard](https://res.cloudinary.com/asset-cloudinary/image/upload/v1776595971/openhands_dashboard_ltl7nw.png)
 
-### OpenHands Software Agent SDK
-The SDK is a composable Python library that contains all of our agentic tech. It's the engine that powers everything else below.
+---
 
-Define agents in code, then run them locally, or scale to 1000s of agents in the cloud.
+## Deploy on Railway in One Click
 
-[Check out the docs](https://docs.openhands.dev/sdk) or [view the source](https://github.com/OpenHands/software-agent-sdk/)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/openhands-coding-agent?utm_medium=integration&utm_source=button&utm_campaign=openhands-coding-agent)
 
-### OpenHands CLI
-The CLI is the easiest way to start using OpenHands. The experience will be familiar to anyone who has worked
-with e.g. Claude Code or Codex. You can power it with Claude, GPT, or any other LLM.
+This Railway template gives you a fully hosted OpenHands instance with:
 
-[Check out the docs](https://docs.openhands.dev/openhands/usage/run-openhands/cli-mode) or [view the source](https://github.com/OpenHands/OpenHands-CLI)
+- **Browser-accessible web UI** — interact with your AI engineer from any device
+- **Persistent workspace volume** — agent state, files, and config survive restarts
+- **Any LLM you choose** — Claude, GPT-4o, Gemini, DeepSeek, Llama via Ollama, or any OpenAI-compatible endpoint
+- **Sandboxed Docker runtime** — agents execute in isolation; your host is never touched
+- **Auto-restart on crash** — service recovers automatically from failures
+- **Full audit trail** — every action, file change, and command is logged in the UI
 
-### OpenHands Local GUI
-Use the Local GUI for running agents on your laptop. It comes with a REST API and a single-page React application.
-The experience will be familiar to anyone who has used Devin or Jules.
+---
 
-[Check out the docs](https://docs.openhands.dev/openhands/usage/run-openhands/local-setup) or view the source in this repo.
+## Getting Started
 
-### OpenHands Cloud
-This is a deployment of OpenHands GUI, running on hosted infrastructure.
+### 1. Deploy to Railway
 
-You can try it for free using the Minimax model by [signing in with your GitHub or GitLab account](https://app.all-hands.dev).
+Click the button above or go to [railway.com/deploy/openhands-coding-agent](https://railway.com/deploy/openhands-coding-agent).
 
-OpenHands Cloud comes with source-available features and integrations:
-- Integrations with Slack, Jira, and Linear
-- Multi-user support
-- RBAC and permissions
-- Collaboration features (e.g., conversation sharing)
+### 2. Set Your Environment Variables
 
-### OpenHands Enterprise
-Large enterprises can work with us to self-host OpenHands Cloud in their own VPC, via Kubernetes.
-OpenHands Enterprise can also work with the CLI and SDK above.
+After deployment, configure the following in your Railway service settings:
 
-OpenHands Enterprise is source-available--you can see all the source code here in the enterprise/ directory,
-but you'll need to purchase a license if you want to run it for more than one month.
+```bash
+SANDBOX_RUNTIME_CONTAINER_IMAGE=docker.all-hands.dev/all-hands-ai/runtime:0.17-nikolaik
+LLM_MODEL=claude-sonnet-4-20250514   # or your preferred model
+LLM_API_KEY=your_api_key_here
+LOG_ALL_EVENTS=true
+```
 
-Enterprise contracts also come with extended support and access to our research team.
+### 3. Open the Web UI
 
-Learn more at [openhands.dev/enterprise](https://openhands.dev/enterprise)
+Visit your Railway public URL. The OpenHands interface will load in your browser. Go to **Settings → Language Models** to confirm your LLM configuration.
 
-### Everything Else
+### 4. Run Your First Task
 
-Check out our [Product Roadmap](https://github.com/orgs/openhands/projects/1), and feel free to
-[open up an issue](https://github.com/OpenHands/OpenHands/issues) if there's something you'd like to see!
+Type a plain-English instruction and let the agent execute it:
 
-You might also be interested in our [evaluation infrastructure](https://github.com/OpenHands/benchmarks), our [chrome extension](https://github.com/OpenHands/openhands-chrome-extension/), or our [Theory-of-Mind module](https://github.com/OpenHands/ToM-SWE).
+```
+Fix the failing test in auth/login.py and open a pull request.
+```
 
-All our work is available under the MIT license, except for the `enterprise/` directory in this repository (see the [enterprise license](enterprise/LICENSE) for details).
-The core `openhands` and `agent-server` Docker images are fully MIT-licensed as well.
+OpenHands will plan the fix, edit the file, run the tests, and commit the result.
 
-If you need help with anything, or just want to chat, [come find us on Slack](https://dub.sh/openhands).
+---
 
-<hr>
+## Common Use Cases
 
-### Thank You to Our Contributors
+- **Autonomous bug fixing** — assign issues or failing tests to the agent and get production-ready PRs back
+- **Codebase refactoring** — automate dependency upgrades, lint fixes, and legacy refactors across repositories
+- **Full-stack feature development** — describe a feature in plain English and let the agent scaffold, implement, and test it
 
-<div align="center">
+---
 
-[![OpenHands Contributors](https://assets.openhands.dev/readme/openhands-openhands-contributors.svg)](https://github.com/OpenHands/OpenHands/graphs/contributors)
+## OpenHands vs. Alternatives
 
-</div>
+| | OpenHands | Devin | GitHub Copilot Agent | Claude Code |
+|---|---|---|---|---|
+| **Open source** | ✅ MIT | ❌ | ❌ | ❌ |
+| **Self-hostable** | ✅ | ❌ | ❌ | ❌ |
+| **Model agnostic** | ✅ Any LLM | ❌ | ⚠️ Curated | ❌ Anthropic only |
+| **Pricing** | Free (BYO key) | ~$500/mo | $10–$39/mo | Usage-based |
+| **Browser automation** | ✅ | ✅ | ❌ | ❌ |
+| **Self-hosted on Railway** | ✅ | ❌ | ❌ | ❌ |
 
-<hr>
+---
 
-### Trusted by Engineers at
+## Resources
 
-<div align="center">
-  <br/><br/>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/tiktok.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/tiktok.svg" alt="TikTok" height="17" hspace="5">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/vmware.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/vmware.svg" alt="VMware" height="17" hspace="5">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/roche.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/roche.svg" alt="Roche" height="17" hspace="5">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/amazon.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/amazon.svg" alt="Amazon" height="17" hspace="5">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/c3-ai.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/c3-ai.svg" alt="C3 AI" height="17" hspace="5">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/netflix.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/netflix.svg" alt="Netflix" height="17" hspace="5">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/mastercard.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/mastercard.svg" alt="Mastercard" height="17" hspace="5">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/red-hat.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/red-hat.svg" alt="Red Hat" height="17" hspace="5">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/mongodb.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/mongodb.svg" alt="MongoDB" height="17" hspace="5">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/apple.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/apple.svg" alt="Apple" height="17" hspace="5">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/nvidia.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/nvidia.svg" alt="NVIDIA" height="17" hspace="5">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://assets.openhands.dev/logos/external/white/google.svg">
-    <img src="https://assets.openhands.dev/logos/external/black/google.svg" alt="Google" height="17" hspace="5">
-  </picture>
-</div>
+- [OpenHands GitHub Repository](https://github.com/OpenHands/OpenHands)
+- [OpenHands Documentation](https://docs.all-hands.dev)
+- [Supported LLM Providers](https://docs.all-hands.dev/usage/llms/llms)
+- [Railway Template Page](https://railway.com/deploy/openhands-coding-agent)
+- [OpenHands Docker Image](https://hub.docker.com/r/all-hands-ai/openhands)
 
-</div>
+---
+
+## About Railway
+
+Railway is a full-stack cloud platform for deploying web apps, servers, databases, and AI agents — with automatic scaling, private networking, persistent volumes, and real-time observability. Deploy OpenHands in one click and get a self-hosted autonomous AI engineer with zero infrastructure overhead.
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/openhands-coding-agent?utm_medium=integration&utm_source=button&utm_campaign=openhands-coding-agent)
